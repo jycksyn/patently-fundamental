@@ -1,55 +1,81 @@
 <!DOCTYPE html>
+<!-- The <!DOCTYPE html> declaration defines this document to be HTML5 -->
 <html lang="en">
+<!-- The <html> tag is the root element of an HTML page -->
+<!-- The lang attribute specifies the language of the document -->
 
 <head>
+    <!-- The <head> element contains meta-information about the HTML document -->
     <meta charset="UTF-8">
+    <!-- The <meta> tag provides metadata about the HTML document -->
+    <!-- The charset attribute specifies the character encoding for the HTML document -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The viewport meta tag ensures the webpage is responsive on all devices -->
     <title>HTML/CSS Fundamentals Workshop</title>
+    <!-- The <title> tag defines the title of the document, shown in the browser's title bar or tab -->
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <!-- The <link> tag defines the relationship between the current document and an external resource -->
+    <!-- The rel attribute specifies the relationship, and href specifies the URL of the linked resource -->
     <style>
+        /* The <style> tag contains CSS to style the HTML document */
         body {
+            /* This CSS expression selects the <body> tag */
             font-family: Arial, sans-serif;
+            /* The font-family property specifies the font for the text */
             margin: 0;
             padding: 0;
+            /* The margin and padding properties remove default spacing */
         }
 
         nav {
             background-color: #333;
+            /* The background-color property sets the background color */
             color: white;
-            padding: 1em;
+            /* The color property sets the text color */
             display: flex;
-            flex-direction: flex-row;
-            gap: 1.5em;
+            /* The display property specifies the display behavior */
             justify-content: center;
+            /* The justify-content property aligns items horizontally */
+            gap: 1em;
+            /* The gap property sets the spacing between items */
         }
 
         nav a {
+            /* The nav a selector targets <a> elements inside <nav> */
             color: white;
             text-decoration: none;
+            /* The text-decoration property removes the underline from links */
         }
 
         .splash {
-            background: url('splash-image.jpg') no-repeat center center/cover;
+            /* This CSS expression selects all elements with the class "splash" */
+            background: url('splash.jpg') center center/cover;
+            /* The background property sets the background image and its position/size */
             color: white;
             height: 100vh;
+            /* The height property sets the height of the element */
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
+            /* The align-items property aligns items vertically */
         }
 
         .splash h1 {
+            /* This CSS expression selects <h1> elements inside elements with the class "splash" */
             font-size: 3em;
+            /* The font-size property sets the size of the font */
         }
 
         .section {
             padding: 2em;
             text-align: center;
+            /* The text-align property centers the text */
         }
 
         .section img {
             max-width: 100%;
             height: auto;
+            /* The max-width and height properties make the image responsive */
         }
 
         .button {
@@ -60,10 +86,10 @@
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 1rem;
-            margin: 0.75rem 0.1rem;
-            cursor: pointer;
+            font-size: 1em;
+            margin: 0.7em;
             border-radius: 5px;
+            /* The border-radius property rounds the corners of the button */
         }
 
         footer {
@@ -102,28 +128,33 @@
         }
 
         .image-card p {
-            font-size: 1em;
             margin-bottom: 1em;
         }
     </style>
 </head>
 
 <body>
+    <!-- The <body> element contains the contents of the HTML document -->
     <nav>
+        <!-- The <nav> element defines a set of navigation links -->
         <a href="#home">Home</a>
-        <a href="#about">About</a>
+        <!-- The <a> tag defines a hyperlink -->
         <a href="#workshop">Workshop</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <div class="splash" id="home">
+        <!-- The <div> tag defines a division or section in an HTML document -->
+        <!-- The id attribute specifies a unique id for an element -->
         <h1>Welcome to the HTML/CSS Fundamentals Workshop</h1>
+        <!-- The <h1> tag defines the most important heading -->
     </div>
 
     <div class="section" id="about">
         <h2>About Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante
-            dapibus diam.</p>
+        <!-- The <h2> tag defines a secondary heading -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+        <!-- The <p> tag defines a paragraph -->
     </div>
 
     <div class="section" id="workshop">
@@ -132,22 +163,24 @@
             <div class="image-card">
                 <h3>Engaging Workshops</h3>
                 <img src="workshop-1.jpg" alt="Workshop Image">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam.</p>
+                <!-- The <img> tag embeds an image in the HTML document -->
+                <!-- The alt attribute provides alternative text for the image -->
+                <!-- This is helpful for screen readers and if the image doesn't load -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
                 <button class="button">Sign Up</button>
+                <!-- The <button> tag defines a clickable button, typically used with JavaScript -->
+                <!-- For link buttons, use the <a> tag with the button class instead -->
             </div>
             <div class="image-card">
                 <h3>Engaging Workshops</h3>
                 <img src="workshop-2.jpg" alt="Workshop Image">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
                 <button class="button">Sign Up</button>
             </div>
             <div class="image-card">
                 <h3>Engaging Workshops</h3>
                 <img src="workshop-3.jpg" alt="Workshop Image">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
-                    cursus ante dapibus diam.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
                 <button class="button">Sign Up</button>
             </div>
         </div>
@@ -155,13 +188,14 @@
 
     <div class="section" id="contact">
         <h2>Contact Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante
-            dapibus diam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
         <button class="button">Get in Touch</button>
     </div>
 
     <footer>
+        <!-- The <footer> element defines a footer for the document or section -->
         <p>&copy; 2023 HTML/CSS Fundamentals Workshop. All rights reserved.</p>
+        <!-- The &copy; entity represents the copyright symbol -->
     </footer>
 </body>
 
